@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <label class="col-sm-3 col-sm-3 control-label">Cost Date</label>
                     <div class="col-sm-9">
-                        <input name="cstdt" type="date" id="cstdt" class="form-control" style="padding-top: 1px;">
+                        <input name="datepicker" type="text" id="datepicker" class="form-control" placeholder="Select Date" onkeydown="return false">
                     </div>
                 </div>
 
