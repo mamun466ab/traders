@@ -96,13 +96,13 @@ class WbdBizActionController extends Controller {
                     'cstid' => 'required',
                     'cstamnt' => 'required|numeric',
                     'cstdtl' => 'max:255',
-                    'cstdt' => 'required',
+                    'datepicker' => 'required',
                         ], [
                     'cstid.required' => 'You can\'t leave this empty.',
                     'cstamnt.required' => 'You can\'t leave this empty.',
                     'cstamnt.numeric' => 'This content must be numeric.',
                     'cstdtl.max' => 'Maximum 255 characters.',
-                    'cstdt.required' => 'You can\'t leave this empty.',
+                    'datepicker.required' => 'You can\'t leave this empty.',
         ]);
 
         if ($orscst_validate->passes()) {
@@ -111,7 +111,7 @@ class WbdBizActionController extends Controller {
             $orsCstInfo['cstnmid'] = $request->cstid;
             $orsCstInfo['cst_mnt'] = $request->cstamnt;
             $orsCstInfo['cst_dtl'] = $request->cstdtl;
-            $orsCstInfo['created_at'] = $request->cstdt;
+            $orsCstInfo['created_at'] = $request->datepicker;
 
             DB::table('ors_cst')->insert($orsCstInfo);
 
@@ -128,14 +128,14 @@ class WbdBizActionController extends Controller {
                     'crg' => 'required|numeric',
                     'pts' => 'required|numeric',
                     'cstdtl' => 'max:255',
-                    'cstdt' => 'required',
+                    'datepicker' => 'required',
                         ], [
                     'dslmnt.required' => 'You can\'t leave this empty.',
                     'dsl.required' => 'You can\'t leave this empty.',
                     'crg.required' => 'You can\'t leave this empty.',
                     'pts.required' => 'You can\'t leave this empty.',
                     'cstdtl.required' => 'You can\'t leave this empty.',
-                    'cstdt.required' => 'You can\'t leave this empty.',
+                    'datepicker.required' => 'You can\'t leave this empty.',
                     'dslmnt.numeric' => 'This content must be numeric.',
                     'dsl.numeric' => 'This content must be numeric.',
                     'crg.numeric' => 'This content must be numeric.',
@@ -150,7 +150,7 @@ class WbdBizActionController extends Controller {
             $uldInfo['crg'] = $request->crg;
             $uldInfo['pts'] = $request->pts;
             $uldInfo['cstdtl'] = $request->cstdtl;
-            $uldInfo['created_at'] = $request->cstdt;
+            $uldInfo['created_at'] = $request->datepicker;
             
             DB::table('uld_mcn')->insert($uldInfo);
             
@@ -168,14 +168,14 @@ class WbdBizActionController extends Controller {
                     'crg' => 'required|numeric',
                     'pts' => 'required|numeric',
                     'cstdtl' => 'max:255',
-                    'cstdt' => 'required',
+                    'datepicker' => 'required',
                         ], [
                     'bot.required' => 'You can\'t leave this empty.',
                     'dslmnt.required' => 'You can\'t leave this empty.',
                     'dslprc.required' => 'You can\'t leave this empty.',
                     'crg.required' => 'You can\'t leave this empty.',
                     'pts.required' => 'You can\'t leave this empty.',
-                    'cstdt.required' => 'You can\'t leave this empty.',
+                    'datepicker.required' => 'You can\'t leave this empty.',
                     'dslmnt.numeric' => 'This content must be numeric.',
                     'dslprc.numeric' => 'This content must be numeric.',
                     'crg.numeric' => 'This content must be numeric.',
@@ -191,7 +191,7 @@ class WbdBizActionController extends Controller {
             $uldBotInfo['mntcrg'] = $request->crg;
             $uldBotInfo['pts'] = $request->pts;
             $uldBotInfo['cstdtl'] = $request->cstdtl;
-            $uldBotInfo['created_at'] = $request->cstdt;
+            $uldBotInfo['created_at'] = $request->datepicker;
             
             DB::table('cst_bot')->insert($uldBotInfo);
             

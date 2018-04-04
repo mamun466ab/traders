@@ -61,35 +61,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!--                <div class="form-group">
-                                    <label class="col-sm-3 col-sm-3 control-label">Vat</label>
-                                    <div class="col-sm-9">
-                                        <input name="vat" type="text" id="vat" class="form-control" placeholder="Vat">
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="col-sm-3 col-sm-3 control-label">Tax</label>
-                                    <div class="col-sm-9">
-                                        <input name="tax" type="text" id="tax" class="form-control" placeholder="Tax">
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="col-sm-3 col-sm-3 control-label">River Toll</label>
-                                    <div class="col-sm-9">
-                                        <input name="rvrtol" type="text" id="rvrtol" class="form-control" placeholder="River Toll">
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="col-sm-3 col-sm-3 control-label">Donation</label>
-                                    <div class="col-sm-9">
-                                        <input name="dnt" type="text" id="dnt" class="form-control" placeholder="Donation">
-                                    </div>
-                                </div>-->
-
+                
                 <div class="form-group">
                     <label class="col-sm-3 col-sm-3 control-label">Product Description (Optional)</label>
                     <div class="col-sm-9">
@@ -100,7 +72,7 @@
                 <div class="form-group">
                     <label class="col-sm-3 col-sm-3 control-label">Purchase Date</label>
                     <div class="col-sm-9">
-                        <input name="datepicker" type="text" id="datepicker" class="form-control" placeholder="Product Price" style="padding-top: 1px;">
+                        <input name="datepicker" type="text" id="datepicker" class="form-control" placeholder="Product Price" onkeydown="return false">
                     </div>
                 </div>
 
