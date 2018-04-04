@@ -25,7 +25,7 @@ class WbdBizActionController extends Controller {
                     'pdtamnt' => 'required|numeric',
                     'pdtunt' => 'required',
                     'ttlprc' => 'required|numeric',
-                    'pdtdt' => 'required',
+                    'datepicker' => 'required',
                     'pdtdtl' => 'max:255',
                         ], [
                     'pdtnm.required' => 'You can\'t leave this empty.',
@@ -34,7 +34,7 @@ class WbdBizActionController extends Controller {
                     'pdtunt.required' => 'You can\'t leave this empty.',
                     'ttlprc.required' => 'You can\'t leave this empty.',
                     'ttlprc.numeric' => 'This content must be numeric.',
-                    'pdtdt.required' => 'You can\'t leave this empty.',
+                    'datepicker.required' => 'You can\'t leave this empty.',
                     'pdtdtl.max' => 'Maximum 255 characters.',
         ]);
 
@@ -46,7 +46,7 @@ class WbdBizActionController extends Controller {
             $buyInfo['untid'] = $request->pdtunt;
             $buyInfo['ttlprc'] = $request->ttlprc;
             $buyInfo['dtl'] = $request->pdtdtl;
-            $buyInfo['created_at'] = $request->pdtdt;
+            $buyInfo['created_at'] = $request->datepicker;
 
             DB::table('buy_pdt')->insert($buyInfo);
 
@@ -61,7 +61,7 @@ class WbdBizActionController extends Controller {
                     'dmplbr' => 'required|numeric',
                     'uldlbr' => 'required|numeric',
                     'extlbr' => 'required|numeric',
-                    'cstdt' => 'required',
+                    'datepicker' => 'required',
                     'cstdtl' => 'max:255',
                         ], [
                     'dmplbr.required' => 'You can\'t leave this empty.',
@@ -70,7 +70,7 @@ class WbdBizActionController extends Controller {
                     'uldlbr.numeric' => 'This content must be numeric.',
                     'extlbr.required' => 'You can\'t leave this empty.',
                     'extlbr.numeric' => 'This content must be numeric.',
-                    'cstdt.required' => 'You can\'t leave this empty.',
+                    'datepicker.required' => 'You can\'t leave this empty.',
                     'cstdtl.max' => 'Maximum 255 characters.',
         ]);
 
@@ -80,7 +80,7 @@ class WbdBizActionController extends Controller {
             $lbrCst['dmplbr'] = $request->dmplbr;
             $lbrCst['uldlbr'] = $request->uldlbr;
             $lbrCst['extlbr'] = $request->extlbr;
-            $lbrCst['created_at'] = $request->cstdt;
+            $lbrCst['created_at'] = $request->datepicker;
             $lbrCst['cstdtl'] = $request->cstdtl;
 
             DB::table('lbr_cst')->insert($lbrCst);
